@@ -1,0 +1,15 @@
+{
+  "keyHex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "object": "dev.ted2xmen.shelf",
+  "commands": [
+    {"verb": "run", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|run|q-20261022T1630-7f3a|1792675800", "sig": "ca804a94710aaa11", "name": "dev.ted2xmen.shelf-runner.cmd.run.q-20261022T1630-7f3a.1792675800.ca804a94710aaa11"},
+    {"verb": "ignore", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|ignore|q-20261022T1630-7f3a|1792675800", "sig": "e41746de91e3c8aa", "name": "dev.ted2xmen.shelf-runner.cmd.ignore.q-20261022T1630-7f3a.1792675800.e41746de91e3c8aa"},
+    {"verb": "stop", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|stop|q-20261022T1630-7f3a|1792675800", "sig": "62a6f9c1eb0d4f91", "name": "dev.ted2xmen.shelf-runner.cmd.stop.q-20261022T1630-7f3a.1792675800.62a6f9c1eb0d4f91"},
+    {"verb": "requeue", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|requeue|q-20261022T1630-7f3a|1792675800", "sig": "56b18d1d2fb13a5f", "name": "dev.ted2xmen.shelf-runner.cmd.requeue.q-20261022T1630-7f3a.1792675800.56b18d1d2fb13a5f"},
+    {"verb": "runnow", "id": "s-20261022T1640-b20d", "ts": 1792675800, "message": "cmd|runnow|s-20261022T1640-b20d|1792675800", "sig": "e1f5fdcd3a2ce729", "name": "dev.ted2xmen.shelf-runner.cmd.runnow.s-20261022T1640-b20d.1792675800.e1f5fdcd3a2ce729"},
+    {"verb": "pause", "id": null, "ts": 1792675800, "message": "cmd|pause|-|1792675800", "sig": "5ae7dac59b283610", "name": "dev.ted2xmen.shelf-runner.cmd.pause.-.1792675800.5ae7dac59b283610"},
+    {"verb": "resume", "id": null, "ts": 1792675800, "message": "cmd|resume|-|1792675800", "sig": "7abee924d7b78c67", "name": "dev.ted2xmen.shelf-runner.cmd.resume.-.1792675800.7abee924d7b78c67"},
+    {"verb": "log", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|log|q-20261022T1630-7f3a|1792675800", "sig": "d3ff55ac9efd745f", "name": "dev.ted2xmen.shelf-runner.cmd.log.q-20261022T1630-7f3a.1792675800.d3ff55ac9efd745f"},
+    {"verb": "attach", "id": "q-20261022T1630-7f3a", "ts": 1792675800, "message": "cmd|attach|q-20261022T1630-7f3a|1792675800", "sig": "a65855cbede05819", "name": "dev.ted2xmen.shelf-runner.cmd.attach.q-20261022T1630-7f3a.1792675800.a65855cbede05819"}
+  ]
+}

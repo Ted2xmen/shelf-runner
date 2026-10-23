@@ -1,0 +1,10 @@
+- [ ] no id agent:claude
+- [ ] bad id id:20261021-7f3a agent:claude
+- [ ] unknown agent id:q-20261021T1305-0001 agent:gpt
+- [ ] two ids id:q-20261021T1305-0002 id:q-20261021T1305-0003 agent:claude
+- [ ] empty value id:q-20261021T1305-0004 agent:
+- [ ] bad mode id:q-20261021T1305-0005 agent:claude mode:auto
+- [ ] bad ref id:q-20261021T1305-0006 agent:claude ref:TODO.md
+- [ ] first id:q-20261021T1305-0007 agent:claude
+- [ ] same id second id:q-20261021T1305-0007 agent:codex
+- [ ] id:q-20261021T1305-0008 agent:claude

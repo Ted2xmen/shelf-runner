@@ -1,0 +1,21 @@
+{
+  "name": "dev.ted2xmen.shelf-runner.log",
+  "userInfo": {
+    "v": 1,
+    "id": "q-20261022T1630-7f3a",
+    "json": "{\"at\":\"2026-10-22T16:31:07+03:00\",\"id\":\"q-20261022T1630-7f3a\",\"lines\":[\"Reading CHANGELOG.md\",\"Drafting notes for 1.4\",\"100% docs/release-1.4.md\",\"⏺ Wrote docs/release-1.4.md\",\"Do you want to commit these notes? (y/n)\"],\"state\":\"running\",\"truncated\":false}"
+  },
+  "decoded": {
+    "at" : "2026-10-22T16:31:07+03:00",
+    "id" : "q-20261022T1630-7f3a",
+    "lines" : [
+      "Reading CHANGELOG.md",
+      "Drafting notes for 1.4",
+      "100% docs/release-1.4.md",
+      "⏺ Wrote docs/release-1.4.md",
+      "Do you want to commit these notes? (y/n)"
+    ],
+    "state" : "running",
+    "truncated" : false
+  }
+}

@@ -1,0 +1,23 @@
+
+  - Note: SHELF-TEST/notes/g4.md has one line: "Runner works end to
+    end - 2026-10-23 10:05 (+03:00), task q-20261023T1005-7acf." notes/
+    did not exist, so I created it; BACKLOG pointed to this folder.
+  - BACKLOG: in BACKLOG.md the test line is now [x]. Both files got
+    the claude-code stamp and 10:05:45 in their frontmatter.
+  - Queue: the AGENT-QUEUE.md line is untouched; the runner has to close it.
+    Tell me to close it if the line stays open.
+
+  The second BACKLOG item (sample data list) was not part of this task; it is
+  still open.
+
+  Gates: not applicable (not a TS project, only two markdown files changed).
+
+✻ Worked for 34s · done 10:05 AM
+○ no      ·     84 (session   ·         ·  ctx     7  · [ Handoff + Clear ] [-]
+agents  cache   % 84%)      opus-5-5  70k/1.0M     % 
+                    70516 tokens·
+────────────────────────────────────────────────────────────────────────────────
+❯ close the queue line too
+────────────────────────────────────────────────────────────────────────────────
+  /Users/test/SHELF-TEST  Opus 5.5 (1M context)
+  -- INSERT -- ⏵⏵ auto mode on (shift+tab to cycle) · ← 1 agent

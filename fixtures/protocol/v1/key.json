@@ -1,0 +1,6 @@
+{
+  "keyHex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "keyId": "630dcd29",
+  "pairCode": "SR1-AAAQEAYEAUDAOCAJBIFQYDIOB4IBCEQTCQKRMFYYDENBWHA5DYPQ",
+  "note": "Test key. Real pairing (shelf-runner pair) makes 32 random bytes."
+}

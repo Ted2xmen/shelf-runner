@@ -1,0 +1,23 @@
+
+  - [1mNote:[0m [38;5;153mSHELF-TEST/notes/g4.md[39m has one line: "Runner works end to
+    end - 2026-10-23 10:05 (+03:00), task q-20261023T1005-7acf." [38;5;153mnotes/
+[39m    did not exist, so I created it; BACKLOG pointed to this folder.
+  - [1mBACKLOG:[0m in [38;5;153mBACKLOG.md[39m the test line is now [38;5;153m[x][39m. Both files got
+    the [38;5;153mclaude-code[39m stamp and 10:05:45 in their frontmatter.
+  - [1mQueue:[0m the [38;5;153mAGENT-QUEUE.md[39m line is untouched; the runner has to close it.
+    Tell me to close it if the line stays open.
+
+  The second BACKLOG item (sample data list) was not part of this task; it is
+  still open.
+
+  Gates: not applicable (not a TS project, only two markdown files changed).
+
+[38;5;246m✻[39m [38;5;246mWorked for 34s · done 10:05 AM
+○ no [39m   [38;5;246m  ·  [39m   [38;5;72m84[38;5;246m (session   ·  [39m     [38;5;246m  ·  ctx [39m    [38;5;72m7[38;5;246m  · [1m[39m[ Handoff + Clear ][0m [38;5;246m[-]
+agents[39m  [38;5;246mcache [39m  [38;5;72m%[39m [38;5;246m84%)[39m      [38;5;246mopus-5-5[39m  [38;5;246m70k/1.0M [39m    [38;5;72m%[38;5;246m 
+[39m                    [38;5;246m70516 tokens·
+[38;5;244m────────────────────────────────────────────────────────────────────────────────
+[39m❯ [2mclose the queue line too
+[0m[38;5;244m────────────────────────────────────────────────────────────────────────────────
+[39m  [31m/Users/test/SHELF-TEST  Opus 5.5 (1M context)
+[39m  [38;5;246m-- INSERT --[39m [38;5;220m⏵⏵ auto mode on[38;5;246m (shift+tab to cycle) · ← 1 agent

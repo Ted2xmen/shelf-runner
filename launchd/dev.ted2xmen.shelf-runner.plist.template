@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- LaunchAgent for `shelf-runner agent`. @APP@ = path of ShelfRunner.app, @LOG@ = ~/Library/Logs/shelf-runner.
+     The binary inside the bundle is started by its real path: notifications need the bundle. -->
+<plist version="1.0"><dict>
+<key>Label</key><string>@LABEL@</string>
+<!-- Ties the job to the app, so Login Items shows ShelfRunner with its icon. -->
+<key>AssociatedBundleIdentifiers</key><array><string>dev.ted2xmen.shelf-runner</string></array>
+<key>ProgramArguments</key><array>
+  <string>@APP@/Contents/MacOS/shelf-runner</string>
+  <string>agent</string>
+</array>
+<key>RunAtLoad</key><true/>
+<key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+<key>ThrottleInterval</key><integer>30</integer>
+<key>ProcessType</key><string>Background</string>
+<key>StandardErrorPath</key><string>@LOG@/agent.log</string>
+<key>StandardOutPath</key><string>@LOG@/agent.log</string>
+@ENV@</dict></plist>

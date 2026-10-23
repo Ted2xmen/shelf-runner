@@ -1,0 +1,356 @@
+{
+  "folders" : [
+    "/Users/test/SHELF-TEST",
+    "/Users/test/Pantheon"
+  ],
+  "jobs" : [
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : "2026-10-22T16:30:58+03:00",
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1630-7f3a",
+      "log" : [
+        "Reading CHANGELOG.md",
+        "Drafting notes for 1.4",
+        "Wrote docs/release-1.4.md"
+      ],
+      "mode" : "attended",
+      "now" : "Wrote docs/release-1.4.md",
+      "out" : null,
+      "ref" : "TODO.md@a41c09e2",
+      "started" : "2026-10-22T16:27:05+03:00",
+      "state" : "running",
+      "title" : "Write release notes for Pantheon 1.4",
+      "tmux" : "shelf-SHELF-TEST:q-20261022T1630-7f3a",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "claude",
+      "asking" : true,
+      "attachError" : "no-session",
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/Pantheon",
+      "id" : "q-20261022T1610-0a0b",
+      "log" : [
+        "Editing Sources/Paywall.swift",
+        "╭──────────────╮",
+        "│ Do you want to allow edits to Paywall.swift? (y/n)"
+      ],
+      "mode" : "attended",
+      "now" : "Do you want to allow edits to Paywall.swift? (y/n)",
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-22T16:10:12+03:00",
+      "state" : "stalled",
+      "title" : "Review the payment screen",
+      "tmux" : "shelf-Pantheon:q-20261022T1610-0a0b",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1633-2d4e",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "needs-approval",
+      "title" : "Check the release note:important",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "codex",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1631-0b2c",
+      "log" : [
+
+      ],
+      "mode" : "unattended",
+      "now" : null,
+      "out" : "reports/",
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:memory",
+      "title" : "Build the weekly metrics report",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:25:00+03:00"
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1632-1c3d",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:slot",
+      "title" : "Prepare the report and send it",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:29:40+03:00"
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/Pantheon",
+      "id" : "q-20261022T1612-3c3c",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:folder",
+      "title" : "Concurrency example",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:20:00+03:00"
+    },
+    {
+      "agent" : "codex",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1625-4d4d",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:limit",
+      "title" : "Job waiting for a limit",
+      "tmux" : null,
+      "waitMaxMin" : 90,
+      "waitingSince" : "2026-10-22T16:25:05+03:00"
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/Pantheon",
+      "id" : "q-20261022T1626-5e5e",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:paused",
+      "title" : "Job in a paused queue",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:26:00+03:00"
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : "2026-10-22T14:19:41+03:00",
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1405-1111",
+      "log" : [
+        "Updated README.md"
+      ],
+      "mode" : "attended",
+      "now" : "Updated README.md",
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-22T14:05:00+03:00",
+      "state" : "done",
+      "title" : "Update the README",
+      "tmux" : "shelf-SHELF-TEST:q-20261022T1405-1111",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : 2,
+      "ended" : "2026-10-22T13:03:52+03:00",
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1300-5555",
+      "log" : [
+        "Wrote notes/contract-summary.md",
+        "Could not write ../Archive/summary.md: permission denied"
+      ],
+      "mode" : "unattended",
+      "now" : "Could not write ../Archive/summary.md: permission denied",
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-22T13:00:04+03:00",
+      "state" : "done",
+      "title" : "Summarize the contract draft",
+      "tmux" : "shelf-SHELF-TEST:q-20261022T1300-5555",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "codex",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : "2026-10-22T12:02:10+03:00",
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1200-2222",
+      "log" : [
+        "error: 3 tests failed"
+      ],
+      "mode" : "attended",
+      "now" : "error: 3 tests failed",
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-22T12:00:03+03:00",
+      "state" : "failed:1",
+      "title" : "Fix the tests",
+      "tmux" : "shelf-SHELF-TEST:q-20261022T1200-2222",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : "2026-10-22T11:01:12+03:00",
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1100-3333",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-22T11:00:00+03:00",
+      "state" : "cancelled",
+      "title" : "Delete the old draft",
+      "tmux" : "shelf-SHELF-TEST:q-20261022T1100-3333",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    },
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : "2026-10-21T23:00:00+03:00",
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261021T0900-4444",
+      "log" : [
+        "still working on module 7 of 12"
+      ],
+      "mode" : "attended",
+      "now" : "still working on module 7 of 12",
+      "out" : null,
+      "ref" : null,
+      "started" : "2026-10-21T21:00:00+03:00",
+      "state" : "failed:timeout",
+      "title" : "Long refactor",
+      "tmux" : "shelf-SHELF-TEST:q-20261021T0900-4444",
+      "waitMaxMin" : null,
+      "waitingSince" : null
+    }
+  ],
+  "keyId" : "630dcd29",
+  "limits" : [
+    {
+      "agent" : "claude",
+      "at" : "2026-10-22T16:28:40+03:00",
+      "fiveHour" : 34,
+      "resetsFiveHour" : "2026-10-22T19:00:00+03:00",
+      "resetsWeek" : "2026-10-27T10:00:00+03:00",
+      "source" : "statusline",
+      "week" : 61
+    },
+    {
+      "agent" : "codex",
+      "at" : "2026-10-22T16:20:02+03:00",
+      "fiveHour" : null,
+      "resetsFiveHour" : null,
+      "resetsWeek" : "2026-11-21T12:10:36+03:00",
+      "source" : "session",
+      "week" : 6
+    }
+  ],
+  "mac" : {
+    "battery" : "battery:64",
+    "diskFreeGB" : 48.2,
+    "memory" : "warn",
+    "thermal" : "nominal"
+  },
+  "paused" : false,
+  "runner" : "0.3.0",
+  "scheduled" : [
+    {
+      "agent" : "codex",
+      "id" : "s-20261022T1640-b20d",
+      "next" : "2026-10-26T09:00:00+03:00",
+      "title" : "Build the weekly metrics report"
+    }
+  ],
+  "seen" : "2026-10-22T16:31:05+03:00",
+  "slots" : {
+    "max" : 2,
+    "perFolder" : 1,
+    "running" : 2
+  },
+  "v" : 1
+}
