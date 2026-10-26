@@ -3,8 +3,8 @@ title: shelf-runner changelog
 description: Release notes, newest first; scripts/release.sh uses this file as the GitHub release notes.
 created_by: claude-code
 created: 2026-10-22T23:30:00+03:00
-updated_by: claude-code
-updated: 2026-10-23T19:27:00+03:00
+updated_by: opencode
+updated: 2026-10-25T13:35:00+03:00
 ---
 # Changelog
 
@@ -13,8 +13,9 @@ updated: 2026-10-23T19:27:00+03:00
 First public release.
 
 - Watches `AGENT-QUEUE.md` and `SCHEDULED.md` in folders you enable and starts each signed, approved
-  line as a Claude Code or Codex job in your tmux (attended: interactive; unattended: print mode
-  with read and edit tools only).
+  line as a Claude Code or Codex job in your tmux (attended: interactive; unattended: print mode,
+  where Claude gets only Read, Edit, Write, Glob and Grep, and Codex runs `exec` with
+  `--sandbox workspace-write` and no network).
 - Approval once per line (macOS notification or `shelf-runner approve`), HMAC-signed lines, paths
   kept inside the folder, no permission-bypass flags anywhere.
 - Holds new jobs on memory pressure, low disk, battery, heat and agent usage limits; cancel,

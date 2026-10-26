@@ -12,8 +12,9 @@ your own tmux, with your own Claude Code or Codex login. You can attach to the t
 time to watch or answer the agent. Tick or delete the line and the runner stops the job.
 
 It is the optional companion of **Shelf**, a sandboxed Mac App Store app that reads your Markdown
-task files: Shelf only appends queue lines, the runner does the rest. The runner also works on its
-own, with any editor.
+task files: Shelf appends signed queue lines, sends signed commands (stop, run, log, attach and a
+few more) and pings for status; the runner does the rest. The runner also works on its own, with
+any editor (see [Using it without Shelf](#using-it-without-shelf)).
 
 > **Status: 0.1.0, not released yet.** There is no signed build or Homebrew cask yet; build it
 > from source (below).
@@ -25,7 +26,7 @@ own, with any editor.
  SCHEDULED.md                     │
                                   ├─ checks signature, paths, limits (memory, disk, battery, heat, usage)
                                   ▼
-                       tmux window "shelf-<folder>"  ──▶  claude / codex  (your login, your settings)
+            tmux session "shelf-<folder>", window "<job id>"  ──▶  claude / codex  (your login, your settings)
 ```
 
 - **Attended** jobs (default) run the agent interactively in tmux; it can ask you things and you
@@ -76,6 +77,24 @@ tmux attach -t shelf-notes              # watch or answer the agent
 To stop a job, tick its line (`- [x]`) or delete it. The runner presses Esc and Ctrl-C in the
 job's window and closes the window if the agent is still running 60 seconds later.
 
+## Using it without Shelf
+
+Shelf is optional. On its own the runner needs only the CLI and an editor:
+
+```sh
+shelf-runner enable ~/Projects/notes    # 1. turn the folder on
+shelf-runner pair                       # 2. make the signing key (ignore the SR1- code)
+shelf-runner line ~/Projects/notes codex "Summarize the meeting notes" --mode unattended --out summary.md
+                                        # 3. prints a signed line: id, agent, mode, by:you, sig
+```
+
+4. Paste the printed line into `~/Projects/notes/AGENT-QUEUE.md` (end the file with a newline).
+5. Approve it: **Run** in the notification, or `shelf-runner approve <id>`.
+
+`line` takes `<folder> <claude|codex> <title...>` and the options `--mode attended|unattended`,
+`--ref file@<8 hex>` and `--out <path>`. It refuses a title that contains a reserved key such as
+`id:` or `agent:`, and warns when the folder is not enabled.
+
 ## The queue line
 
 ```markdown
@@ -89,11 +108,12 @@ job's window and closes the window if the agent is still running 60 seconds late
 | `mode:` | `attended` (default) or `unattended` (see above) |
 | `ref:`, `out:` | optional source line and output path; both must stay inside the folder |
 | `by:` | who wrote the line |
-| `sig:` | HMAC of the line with your pairing key; the runner never starts an unsigned or edited line |
+| `sig:` | first 8 hex of an HMAC-SHA256, made with your pairing key over the line's canonical text (id, folder, title, agent, mode; see [the protocol](docs/protocol/v1.md#5-canonical-text-and-signatures)); the runner never starts an unsigned or edited line |
 
 The rest of the line is the task text. It goes to the agent as one argument, never through a shell.
-Lines in `SCHEDULED.md` add `due:`, `at:` and `every:` (`day`, `week`, `month`, `year`). Shelf writes
-and signs them; the CLI cannot sign a scheduled line yet.
+Lines in `SCHEDULED.md` add `due:`, `at:` and `every:` (`day`, `week`, `month`, `year`). Nothing
+signs scheduled lines today: the CLI cannot, and Shelf writes only queue lines (see
+[Known gaps](docs/protocol/v1.md#16-known-gaps)).
 
 ## Safety model
 
@@ -178,13 +198,22 @@ rm -rf ~/Library/Application\ Support/shelf-runner ~/Library/Logs/shelf-runner ~
 | `Sources/ShelfRunnerCore` | queue parsing, signing, supervisor, tmux, limits, bridge to Shelf |
 | `Sources/shelf-runner` | the CLI and the notification app |
 | `Tests/` | Swift Testing suite with a fake agent and recorded tmux screens |
-| `fixtures/protocol/v1/` | shared protocol test files that Shelf checks against too; its README documents the protocol rules |
+| `fixtures/protocol/v1/` | generated protocol test files; consumers keep their own copies (no automatic sync). The contract itself is [docs/protocol/v1.md](docs/protocol/v1.md) |
+| `docs/` | protocol, architecture and ecosystem docs |
 | `scripts/` | build, LaunchAgent install, icon and release scripts |
 | `packaging/homebrew/` | cask template filled in by `scripts/release.sh` |
 | `e2e/` | end-to-end probe: a sandboxed app talks to the runner |
 
 Releases: `scripts/release.sh <version>` builds a universal app, signs it with a Developer ID,
 notarizes and staples it, and writes the cask for `ted2xmen/homebrew-tap`. See the script header.
+
+## Documentation
+
+- [docs/protocol/README.md](docs/protocol/README.md): what the protocol is, version policy, fixtures
+- [docs/protocol/v1.md](docs/protocol/v1.md): the protocol v1 contract
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): how the runner is built
+- [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md): Shelf, shelf-runner and Runner Desk
+- [CONTRIBUTING.md](CONTRIBUTING.md): build, test and the rules for changes
 
 ## License
 
