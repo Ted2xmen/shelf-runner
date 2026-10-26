@@ -1,5 +1,5 @@
 ---
-title: shelf-runner changelog
+title: shelf-bridge changelog
 description: Release notes, newest first; scripts/release.sh uses this file as the GitHub release notes.
 created_by: claude-code
 created: 2026-10-22T23:30:00+03:00
@@ -7,6 +7,21 @@ updated_by: opencode
 updated: 2026-10-25T13:35:00+03:00
 ---
 # Changelog
+
+## 0.2.0 (unreleased)
+
+The project is renamed to Shelf Bridge, and the protocol moves to v2.
+
+- Rename: the command is `shelf-bridge`, the app `ShelfBridge.app`, the bundle id and LaunchAgent
+  label `dev.ted2xmen.shelf-bridge`, the Swift module `ShelfBridgeCore`. State, logs and config
+  live in `shelf-bridge` folders; the environment variables are `SHELF_BRIDGE_*`. The companion
+  terminal app is now Shelf Bench (`shelfbench://`).
+- Protocol v2 ([docs/protocol/v2.md](docs/protocol/v2.md), `fixtures/protocol/v2/`): notification
+  names are `dev.ted2xmen.shelf-bridge.*`, the status `v` is 2 and its `runner` field is now `bridge`, pairing codes start with `SB1-`.
+  There is no compatibility with v1: Shelf and Shelf Bench must be updated together. The v1
+  document and fixtures stay as history.
+- 0.2.0 uses new paths and names, so remove the old LaunchAgent, install again and pair again
+  with the new `SB1-` code.
 
 ## 0.1.0 (unreleased)
 

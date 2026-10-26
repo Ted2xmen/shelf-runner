@@ -1,0 +1,58 @@
+{
+  "bridge" : "0.3.0",
+  "folders" : [
+    "/Users/test/SHELF-TEST",
+    "/Users/test/Pantheon"
+  ],
+  "jobs" : [
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/Pantheon",
+      "id" : "q-20261022T1612-3c3c",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : null,
+      "started" : null,
+      "state" : "waiting:folder",
+      "title" : "Concurrency example",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:20:00+03:00"
+    }
+  ],
+  "keyId" : "630dcd29",
+  "limits" : [
+
+  ],
+  "mac" : {
+    "battery" : "charging",
+    "diskFreeGB" : 212.7,
+    "memory" : "normal",
+    "thermal" : "nominal"
+  },
+  "paused" : false,
+  "scheduled" : [
+    {
+      "agent" : "codex",
+      "id" : "s-20261022T1640-b20d",
+      "next" : "2026-10-26T09:00:00+03:00",
+      "title" : "Build the weekly metrics report"
+    }
+  ],
+  "seen" : "2026-10-22T16:31:05+03:00",
+  "slots" : {
+    "max" : 2,
+    "perFolder" : 1,
+    "running" : 0
+  },
+  "v" : 2
+}

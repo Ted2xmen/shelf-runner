@@ -1,4 +1,4 @@
-// End-to-end probe: a sandboxed app (like Shelf) pings the runner, reads the status, sends signed commands.
+// End-to-end probe: a sandboxed app (like Shelf) pings Bridge, reads the status, sends signed commands.
 // argv[1] = pairing key as hex (test only). Writes what it saw to its container: probe.json.
 import AppKit
 import CryptoKit
@@ -17,7 +17,7 @@ func send(_ verb: String) {
     let ts = Int(Date().timeIntervalSince1970)
     let mac = HMAC<SHA256>.authenticationCode(for: Data("cmd|\(verb)|-|\(ts)".utf8), using: SymmetricKey(data: key))
     let sig = mac.map { String(format: "%02x", $0) }.joined().prefix(16)
-    dnc.postNotificationName(.init("dev.ted2xmen.shelf-runner.cmd.\(verb).-.\(ts).\(sig)"), object: object, userInfo: nil, deliverImmediately: true)
+    dnc.postNotificationName(.init("dev.ted2xmen.shelf-bridge.cmd.\(verb).-.\(ts).\(sig)"), object: object, userInfo: nil, deliverImmediately: true)
 }
 func finish() {
     let doc: [String: Any] = ["sandboxed": NSHomeDirectory().contains("/Library/Containers/"), "statuses": seen]
@@ -25,7 +25,7 @@ func finish() {
     exit(0)
 }
 
-dnc.addObserver(forName: .init("dev.ted2xmen.shelf-runner.status"), object: nil, queue: .main) { n in
+dnc.addObserver(forName: .init("dev.ted2xmen.shelf-bridge.status"), object: nil, queue: .main) { n in
     guard let json = n.userInfo?["json"] as? String,
           let s = try? JSONSerialization.jsonObject(with: Data(json.utf8)) as? [String: Any] else { return }
     seen.append(["v": n.userInfo?["v"] ?? NSNull(), "paused": s["paused"] ?? NSNull(), "keyId": s["keyId"] ?? NSNull(),

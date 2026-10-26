@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "shelf-runner",
+    name: "shelf-bridge",
     platforms: [.macOS(.v14)],
     products: [
-        .executable(name: "shelf-runner", targets: ["shelf-runner"]),
-        .library(name: "ShelfRunnerCore", targets: ["ShelfRunnerCore"]),
+        .executable(name: "shelf-bridge", targets: ["shelf-bridge"]),
+        .library(name: "ShelfBridgeCore", targets: ["ShelfBridgeCore"]),
     ],
     targets: [
-        .target(name: "ShelfRunnerCore"),
-        .executableTarget(name: "shelf-runner", dependencies: ["ShelfRunnerCore"]),
+        .target(name: "ShelfBridgeCore"),
+        .executableTarget(name: "shelf-bridge", dependencies: ["ShelfBridgeCore"]),
         // Depends on the executable so integration tests can start the real `wrap`.
-        .testTarget(name: "ShelfRunnerCoreTests", dependencies: ["ShelfRunnerCore", "shelf-runner"]),
+        .testTarget(name: "ShelfBridgeCoreTests", dependencies: ["ShelfBridgeCore", "shelf-bridge"]),
     ]
 )

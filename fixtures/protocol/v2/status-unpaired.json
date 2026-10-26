@@ -1,0 +1,52 @@
+{
+  "bridge" : "0.3.0",
+  "folders" : [
+    "/Users/test/SHELF-TEST"
+  ],
+  "jobs" : [
+    {
+      "agent" : "claude",
+      "asking" : false,
+      "attachError" : null,
+      "attached" : null,
+      "blocked" : null,
+      "ended" : null,
+      "folder" : "/Users/test/SHELF-TEST",
+      "id" : "q-20261022T1630-7f3a",
+      "log" : [
+
+      ],
+      "mode" : "attended",
+      "now" : null,
+      "out" : null,
+      "ref" : "TODO.md@a41c09e2",
+      "started" : null,
+      "state" : "waiting:signature",
+      "title" : "Write release notes for Pantheon 1.4",
+      "tmux" : null,
+      "waitMaxMin" : null,
+      "waitingSince" : "2026-10-22T16:30:00+03:00"
+    }
+  ],
+  "keyId" : null,
+  "limits" : [
+
+  ],
+  "mac" : {
+    "battery" : null,
+    "diskFreeGB" : null,
+    "memory" : "normal",
+    "thermal" : "fair"
+  },
+  "paused" : false,
+  "scheduled" : [
+
+  ],
+  "seen" : "2026-10-22T16:31:05+03:00",
+  "slots" : {
+    "max" : 2,
+    "perFolder" : 1,
+    "running" : 0
+  },
+  "v" : 2
+}

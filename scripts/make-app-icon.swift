@@ -1,4 +1,4 @@
-// Renders ShelfRunner.app's icon from design/icon/runner-app-icon-1024.svg (see
+// Renders ShelfBridge.app's icon from design/icon/bridge-app-icon-1024.svg (see
 // design/icon/README.md): 16, 32, 128, 256, 512 pt at @1x and @2x into build/AppIcon.iconset,
 // then build/AppIcon.icns with iconutil. AppKit's own SVG renderer, sRGB PNGs; modelled on
 // Shelf's scripts/make-brand-assets.swift. Same input, same output. Run from the repo root:
@@ -7,7 +7,7 @@
 import AppKit
 
 let root = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-let source = root.appendingPathComponent("design/icon/runner-app-icon-1024.svg")
+let source = root.appendingPathComponent("design/icon/bridge-app-icon-1024.svg")
 let iconset = root.appendingPathComponent("build/AppIcon.iconset")
 let icns = root.appendingPathComponent("build/AppIcon.icns")
 
